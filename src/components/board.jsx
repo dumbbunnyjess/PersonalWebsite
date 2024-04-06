@@ -67,6 +67,7 @@ function Board() {
       <Tile></Tile>
       <Tile></Tile>
       <Tile></Tile>
+      <Tile></Tile>
     </div>
   );
 }
