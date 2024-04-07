@@ -1,16 +1,39 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
-import CustomHeader from "./components/header.jsx";
-import Welcome from "./components/welcome.jsx";
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Minesweeper from "./components/minesweeper.jsx";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import MinesweeperPage from "./pages/minesweeper.js";
+import WelcomePage from "./pages/welcome.js";
+
+// function App() {
+//   return (
+//     <div>
+//       <Minesweeper />
+//     </div>
+//   );
+// }
+
+// export default App;
 
 function App() {
   return (
-    <div>
-      <Minesweeper />
-    </div>
+    <Router>
+      <div>
+        {/* Your navigation */}
+        <nav>
+          <Link to="/">Welcome</Link>
+          <Link to="/minesweeper">Minesweeper</Link>
+          {/* Links to other projects */}
+        </nav>
+
+        {/* Your routes */}
+        <Routes>
+          <Route path="/" element={<WelcomePage />} />
+          <Route path="/minesweeper" element={<MinesweeperPage />} />
+          {/* Add additional routes here if you have more pages */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

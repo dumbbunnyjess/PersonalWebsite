@@ -133,7 +133,7 @@ main {
   padding-right: 90px;
   padding-left: 90px;
   padding-bottom: 20px;
-  height: 93vh;
+  height: 91vh;
 }
 
 footer {
@@ -379,21 +379,42 @@ footer {
 
 .board {
   display: grid;
-  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px;
-  grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px;
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(8, 50px);
   cursor: pointer;
   position: relative;
   justify-content: center;
+  align-items: center;
 }
-.tile {
+.app-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  height: 100%;
+}
+
+.tile1 {
+  background-color: #aad750;
   color: black;
   font-size: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 50px;
+  width: 50px;
+}
+.tile2 {
+  background-color: #a2d148;
+  color: black;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
 }
 .tile > [data-status="hidden"] {
-  background-color: gray;
+  background-color: rgb(235, 235, 235);
   cursor: pointer;
 }
 .tile > [data-status="mine"] {
@@ -407,10 +428,4 @@ footer {
 .tile > [data-status="marked"] {
   background-color: yellow;
   cursor: pointer;
-}
-.app-container {
-  height: 93vh; /* Set the height of the container to full viewport height */
-  display: flex;
-  justify-content: center; /* Horizontally center the content */
-  align-items: center; /* Vertically center the content */
 }

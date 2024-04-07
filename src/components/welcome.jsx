@@ -1,6 +1,8 @@
 import React from "react";
 import CustomHeader from "./header";
 import Footer from "./footer";
+import headshot from "../images/welcome/website_headshot.jpg";
+import UCILogo from "../images/welcome/UCILogo.png";
 
 function Welcome() {
   return (
@@ -10,11 +12,7 @@ function Welcome() {
       <div class="main-content">
         <div class="container">
           <div class="third-block">
-            <img
-              src="/images/website_headshot.jpg"
-              alt="Personal Headshot"
-              class="image"
-            />
+            <img src={headshot} alt="Personal Headshot" class="image" />
             <subtitle>Image from my recent trip to Cancun</subtitle>
           </div>
 
@@ -33,17 +31,13 @@ function Welcome() {
               <pbold>About me:</pbold>
               <p>
                 <br />
-                <img
-                  src="/images/UCILogo.png"
-                  alt="A Description of the Image"
-                  class="circular-image"
-                />
+                <img src={UCILogo} alt="UCI" class="circular-image" />
                 University of California, Irvine
               </p>
               <p>
                 <img
                   src="/images/github.png"
-                  alt="A Description of the Image"
+                  alt="Los Angeles"
                   class="circular-image"
                 />
                 Los Angeles Metrapolitan Area
@@ -51,7 +45,7 @@ function Welcome() {
               <p>
                 <img
                   src="/images/UCILogo.jpeg"
-                  alt="A Description of the Image"
+                  alt="Salt Lake City"
                   class="circular-image"
                 />
                 Salt Lake City, Utah

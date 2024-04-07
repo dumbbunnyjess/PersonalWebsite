@@ -7,10 +7,12 @@ function Minesweeper() {
   return (
     <div>
       <CustomHeader></CustomHeader>
-      <div className="app-container">
-        <Board></Board>
+      <div class="main-content">
+        <div className="app-container">
+          <Board></Board>
+        </div>
+        {/* Your Minesweeper component JSX */}
       </div>
-      {/* Your Minesweeper component JSX */}
       <Footer />
     </div>
   );
