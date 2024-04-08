@@ -5,16 +5,6 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import MinesweeperPage from "./pages/minesweeper.js";
 import WelcomePage from "./pages/welcome.js";
 
-// function App() {
-//   return (
-//     <div>
-//       <Minesweeper />
-//     </div>
-//   );
-// }
-
-// export default App;
-
 function App() {
   return (
     <Router>
