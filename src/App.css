@@ -426,7 +426,7 @@ footer {
   height: 50px;
   width: 50px;
 }
-.revealedTile1 {
+.revealedtile1 {
   background-color: #f0dfce;
   color: black;
   font-size: 2em;
@@ -436,8 +436,18 @@ footer {
   height: 50px;
   width: 50px;
 }
-.revealedile2 {
-  background-color: #c6b8aa;
+.revealedtile2 {
+  background-color: #e7d5c4;
+  color: black;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+}
+.mine {
+  background-color: red;
   color: black;
   font-size: 2em;
   display: flex;

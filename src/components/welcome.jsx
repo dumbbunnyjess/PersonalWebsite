@@ -18,15 +18,13 @@ function Welcome() {
 
           <div className="container">
             <div className="half-block">
-              <p>
-                <br />
-                <br />
-                <div className="pbold">Hello world! </div>My name is Jessica
-                Lin, and welcome to my website. I coded it from scratch using
-                Javascript, React, HTML, and CSS.
-                <br />
-                <br />
-              </p>
+              <br />
+              <br />
+              <div className="pbold">Hello world! </div>My name is Jessica Lin,
+              and welcome to my website. I coded it from scratch using
+              Javascript, React, HTML, and CSS.
+              <br />
+              <br />
               <br />
               <p className="pbold">About me:</p>
               <p>

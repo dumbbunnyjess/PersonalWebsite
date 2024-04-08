@@ -15,7 +15,17 @@ function Board() {
   });
 
   const handleTileClick = (rowIndex, colIndex) => {
-    // ... your code for handling tile click ...
+    // Clone the current board state
+    const newBoard = [...board];
+    newBoard[rowIndex][colIndex].isRevealed = true;
+
+    if (newBoard[rowIndex][colIndex].isMine) {
+      console.log("YOU LOSE");
+      newBoard[rowIndex][colIndex].isMine = true;
+    } else {
+      newBoard[rowIndex][colIndex].isRevealed = true;
+    }
+    setBoard(newBoard);
   };
 
   return (
