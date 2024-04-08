@@ -2,15 +2,18 @@ function Footer() {
   return (
     <div>
       <footer>
-        <div class="footer-left">
-          <a class="footer-btn" href="https://www.linkedin.com/in/jjessicalin">
+        <div className="footer-left">
+          <a
+            className="footer-btn"
+            href="https://www.linkedin.com/in/jjessicalin"
+          >
             LinkedIn
           </a>
-          <a href="mailto:linjjessica@gmail.com" class="footer-btn">
+          <a href="mailto:linjjessica@gmail.com" className="footer-btn">
             EMAIL
           </a>
         </div>
-        <div class="footer-right">Developed by Jessica Lin</div>
+        <div className="footer-right">Developed by Jessica Lin</div>
       </footer>
     </div>
   );

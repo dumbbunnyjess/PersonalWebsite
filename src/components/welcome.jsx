@@ -9,36 +9,36 @@ function Welcome() {
     <div>
       <CustomHeader />
 
-      <div class="main-content">
-        <div class="container">
-          <div class="third-block">
-            <img src={headshot} alt="Personal Headshot" class="image" />
-            <subtitle>Image from my recent trip to Cancun</subtitle>
+      <div className="main-content">
+        <div className="container">
+          <div className="third-block">
+            <img src={headshot} alt="Personal Headshot" className="image" />
+            <div className="subtitle">Image from my recent trip to Cancun</div>
           </div>
 
-          <div class="container">
-            <div class="half-block">
+          <div className="container">
+            <div className="half-block">
               <p>
                 <br />
                 <br />
-                <pbold>Hello world! </pbold>My name is Jessica Lin, and welcome
-                to my website. I coded it from scratch using HTML, CSS, and
-                JavaScript.
+                <div className="pbold">Hello world! </div>My name is Jessica
+                Lin, and welcome to my website. I coded it from scratch using
+                Javascript, React, HTML, and CSS.
                 <br />
                 <br />
               </p>
               <br />
-              <pbold>About me:</pbold>
+              <p className="pbold">About me:</p>
               <p>
                 <br />
-                <img src={UCILogo} alt="UCI" class="circular-image" />
+                <img src={UCILogo} alt="UCI" className="circular-image" />
                 University of California, Irvine
               </p>
               <p>
                 <img
                   src="/images/github.png"
                   alt="Los Angeles"
-                  class="circular-image"
+                  className="circular-image"
                 />
                 Los Angeles Metrapolitan Area
               </p>
@@ -46,13 +46,13 @@ function Welcome() {
                 <img
                   src="/images/UCILogo.jpeg"
                   alt="Salt Lake City"
-                  class="circular-image"
+                  className="circular-image"
                 />
                 Salt Lake City, Utah
               </p>
               <br />
             </div>
-            <div class="half-block">
+            <div className="half-block">
               <p>
                 <br />
                 <br />
@@ -70,7 +70,7 @@ function Welcome() {
               <br />
               <p>
                 Feel free to reach out to me anytime at
-                <a href="mailto:linjjessica@gmail.com" class="email-link">
+                <a href="mailto:linjjessica@gmail.com" className="email-link">
                   linjjessica@gmail.com
                 </a>
                 .

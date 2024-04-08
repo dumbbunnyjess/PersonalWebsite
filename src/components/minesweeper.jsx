@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CustomHeader from "./header";
 import Board from "./board";
 import Footer from "./footer";
-
 function Minesweeper() {
   return (
     <div>
       <CustomHeader></CustomHeader>
-      <div class="main-content">
+      <div className="main-content">
         <div className="app-container">
           <Board></Board>
         </div>

@@ -1,5 +1,5 @@
 import Github from "../images/header/github.png";
-import LinkedIn from "../images/header/linkedin.jpeg";
+import LinkedIn from "../images/header/linkedin.png";
 
 import { useNavigate } from "react-router-dom";
 
@@ -16,39 +16,37 @@ function CustomHeader() {
 
   return (
     <div>
-      <nav class="navbar">
-        <div class="navbar-nav-left">
+      <nav className="navbar">
+        <div className="navbar-nav-left">
           <button
             id="LoadWelcome"
-            class="navbar-nav-btn"
+            className="navbar-nav-btn"
             onClick={handleWelcomeClick}
           >
             Welcome
           </button>
-          <div class="dropdown">
-            <button class="navbar-nav-btn">Personal Projects</button>
-            <div class="dropdown-content">
+          <div className="dropdown">
+            <button className="navbar-nav-btn">Personal Projects</button>
+            <div className="dropdown-content">
               <button
                 id="LoadMinesweeper"
-                class="dropbtn"
+                className="dropbtn"
                 onClick={handleMinesweeperClick}
               >
                 Minesweeper
               </button>
-              <a href="#">Project 2</a>
-              <a href="#">Project 3</a>
             </div>
           </div>
         </div>
-        <h1 class="navbar-nav-middle">Jessica Lin</h1>
-        <div class="navbar-nav-right">
-          <button class="navbar-nav-btn">My Hobbies</button>
-          <button class="navbar-nav-btn">Contact</button>
+        <h1 className="navbar-nav-middle">Jessica Lin</h1>
+        <div className="navbar-nav-right">
+          <button className="navbar-nav-btn">My Interests</button>
+          {/* <button className="navbar-nav-btn">Contact</button> */}
         </div>
-        <div class="navbar-nav-icon-container">
-          <img src={Github} alt="Github" class="navbar-nav-icon" />
-          <img src={LinkedIn} alt="LinkedIn" class="navbar-nav-icon" />
-        </div>
+        {/* <div className="navbar-nav-icon-container">
+          <img src={Github} alt="Github" className="navbar-nav-icon" />
+          <img src={LinkedIn} alt="LinkedIn" className="navbar-nav-icon" />
+        </div> */}
       </nav>
     </div>
   );
