@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.855efa79.css",
+    "main.js": "/static/js/main.ec7dfc63.js",
+    "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
+    "static/media/website_headshot.jpg": "/static/media/website_headshot.8b7435bc4087048cf1cb.jpg",
+    "static/media/linkedin.png": "/static/media/linkedin.b596de10886c6a619a38.png",
+    "static/media/UCILogo.png": "/static/media/UCILogo.984d12ef7693505a8536.png",
+    "static/media/github.png": "/static/media/github.342b5b72f80ae030fac7.png",
+    "index.html": "/index.html",
+    "main.855efa79.css.map": "/static/css/main.855efa79.css.map",
+    "main.ec7dfc63.js.map": "/static/js/main.ec7dfc63.js.map",
+    "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.855efa79.css",
+    "static/js/main.ec7dfc63.js"
+  ]
+}
