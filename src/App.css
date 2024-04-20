@@ -70,21 +70,31 @@ p {
   font-family: inherit;
 }
 
-pbold {
-  font-size: 20px;
+.pbold {
+  font-size: 22px;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 400;
 }
 
-p2 {
-  font-size: 20px;
+.image_caption {
+  font-size: 12px;
   font-family: inherit;
+  padding-top: 2px;
+  padding-left: 2px;
 }
 
-subtitle {
-  margin: 0;
-  margin-top: 0;
-  font-size: 10px;
+.logo_container {
+  display: flex;
+  height: 40px;
+  font-size: 16pt;
+  justify-content: left;
+  align-items: center;
+}
+.subtitle {
+  font-size: 22px;
+  font-family: inherit;
+  font-weight: 400;
+  padding-bottom: 5px;
 }
 
 h1 {
@@ -238,6 +248,7 @@ footer {
 }
 .circular-image {
   width: 40px; /* or any specific size */
+  padding-right: 10px;
 }
 
 .navbar {

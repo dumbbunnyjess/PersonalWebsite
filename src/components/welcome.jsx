@@ -3,6 +3,14 @@ import CustomHeader from "./header";
 import Footer from "./footer";
 import headshot from "../images/welcome/website_headshot.jpg";
 import UCILogo from "../images/welcome/UCILogo.png";
+import UtahIcon from "../images/welcome/Utah.jpg";
+import LAIcon from "../images/welcome/LA.png";
+import PythonIcon from "../images/welcome/C++Logo.png";
+import CIcon from "../images/welcome/PythonLogo.png";
+import JavaScriptIcon from "../images/welcome/JavaScriptLogo.png";
+import HTMLIcon from "../images/welcome/HTMLLogo.jpg";
+import ReactIcon from "../images/welcome/ReactLogo.png";
+import CSSIcon from "../images/welcome/CSSLogo.jpg";
 
 function Welcome() {
   return (
@@ -13,55 +21,111 @@ function Welcome() {
         <div className="container">
           <div className="third-block">
             <img src={headshot} alt="Personal Headshot" className="image" />
-            <div className="subtitle">Image from my recent trip to Cancun</div>
+            <div className="image_caption">
+              Image from my recent trip to Cancun
+            </div>
           </div>
 
           <div className="container">
             <div className="half-block">
               <br />
+              <div>
+                <div className="subtitle">Hello world!</div>
+                <p>
+                  My name is Jessica Lin, and welcome to my website. I coded it
+                  from scratch using Javascript, React, HTML, and CSS.
+                </p>
+              </div>
               <br />
-              <div className="pbold">Hello world! </div>My name is Jessica Lin,
-              and welcome to my website. I coded it from scratch using
-              Javascript, React, HTML, and CSS.
               <br />
               <br />
-              <br />
-              <p className="pbold">About me:</p>
-              <p>
-                <br />
-                <img src={UCILogo} alt="UCI" className="circular-image" />
-                University of California, Irvine
-              </p>
-              <p>
+              <div className="subtitle">About me:</div>
+              <div className="logo_container">
                 <img
-                  src="/images/github.png"
+                  src={UCILogo}
+                  alt="University of California, Irvine"
+                  className="circular-image"
+                />
+                University of California, Irvine
+              </div>
+              <div className="logo_container">
+                <img
+                  src={UtahIcon}
+                  alt="Salt Lake City, Utah"
+                  className="circular-image"
+                />
+                Salt Lake City, Utah
+              </div>
+              <div className="logo_container">
+                <img
+                  src={LAIcon}
                   alt="Los Angeles"
                   className="circular-image"
                 />
                 Los Angeles Metrapolitan Area
-              </p>
-              <p>
-                <img
-                  src="/images/UCILogo.jpeg"
-                  alt="Salt Lake City"
-                  className="circular-image"
-                />
-                Salt Lake City, Utah
-              </p>
-              <br />
+              </div>
             </div>
             <div className="half-block">
               <p>
-                <br />
-                <br />
-                I have classroom and personal experience working with
-                <br />• Python <br />• C++ <br />• JavaScript
-                <br />• HTML
-                <br />• CSS
-                <br />
+                <br />I have classroom and personal experience working with
               </p>
               <br />
               <p>
+                <div className="logo_container">
+                  <img
+                    src={PythonIcon}
+                    alt="Los Angeles"
+                    className="circular-image"
+                  />
+                  Python
+                </div>
+                <div className="logo_container">
+                  <img
+                    src={CIcon}
+                    alt="Los Angeles"
+                    className="circular-image"
+                  />
+                  C++
+                </div>
+                <div className="logo_container">
+                  <img
+                    src={JavaScriptIcon}
+                    alt="Los Angeles"
+                    className="circular-image"
+                  />
+                  JavaScript
+                </div>
+                <div className="logo_container">
+                  <img
+                    src={HTMLIcon}
+                    alt="Los Angeles"
+                    className="circular-image"
+                  />
+                  HTML
+                </div>
+                <div className="logo_container">
+                  <img
+                    src={ReactIcon}
+                    alt="Los Angeles"
+                    className="circular-image"
+                  />
+                  React
+                </div>
+                <div className="logo_container">
+                  <img
+                    src={CSSIcon}
+                    alt="Los Angeles"
+                    className="circular-image"
+                  />
+                  CSS
+                </div>
+                {/* <br />• Python <br />• C++ <br />• JavaScript
+                <br />• HTML
+                <br />• CSS
+                <br /> */}
+              </p>
+              <br />
+              {/* <p>
                 In my freetime, I enjoy thrifting, gaming, working out, playing
                 poker, and finding new music!
               </p>
@@ -72,8 +136,9 @@ function Welcome() {
                   linjjessica@gmail.com
                 </a>
                 .
-              </p>
+              </p> */}
             </div>
+            <div className="container"></div>
           </div>
         </div>
       </div>
