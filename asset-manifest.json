@@ -1,19 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.855efa79.css",
-    "main.js": "/static/js/main.ec7dfc63.js",
+    "main.css": "/static/css/main.1da6ae45.css",
+    "main.js": "/static/js/main.fe1467fd.js",
     "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
     "static/media/website_headshot.jpg": "/static/media/website_headshot.8b7435bc4087048cf1cb.jpg",
+    "static/media/ReactLogo.png": "/static/media/ReactLogo.81ed438b18e24116794d.png",
+    "static/media/PythonLogo.png": "/static/media/PythonLogo.39e2e9499029a72b1d8b.png",
+    "static/media/C++Logo.png": "/static/media/C++Logo.fc461cc8303a38559c80.png",
     "static/media/linkedin.png": "/static/media/linkedin.b596de10886c6a619a38.png",
-    "static/media/UCILogo.png": "/static/media/UCILogo.984d12ef7693505a8536.png",
+    "static/media/CSSLogo.jpg": "/static/media/CSSLogo.5fd4d1a506d77312d030.jpg",
+    "static/media/HTMLLogo.jpg": "/static/media/HTMLLogo.7bbd3e34065c43cf34b8.jpg",
+    "static/media/Utah.jpg": "/static/media/Utah.c2ae5543a94a35bf7349.jpg",
     "static/media/github.png": "/static/media/github.342b5b72f80ae030fac7.png",
+    "static/media/JavaScriptLogo.png": "/static/media/JavaScriptLogo.266bd9fb2663dcc057b4.png",
     "index.html": "/index.html",
-    "main.855efa79.css.map": "/static/css/main.855efa79.css.map",
-    "main.ec7dfc63.js.map": "/static/js/main.ec7dfc63.js.map",
+    "main.1da6ae45.css.map": "/static/css/main.1da6ae45.css.map",
+    "main.fe1467fd.js.map": "/static/js/main.fe1467fd.js.map",
     "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.855efa79.css",
-    "static/js/main.ec7dfc63.js"
+    "static/css/main.1da6ae45.css",
+    "static/js/main.fe1467fd.js"
   ]
 }
