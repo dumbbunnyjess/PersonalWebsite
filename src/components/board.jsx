@@ -14,6 +14,39 @@ function Board() {
     printBoard(board);
   });
 
+  const revealAdjacentTiles = (row, col) => {
+    // Directions for orthogonal neighbors: up, right, down, left
+    const newBoard = [...board];
+    const directions = [
+      [0, -1], // Left
+      [-1, 0], // Up
+      [0, 1], // Right
+      [1, 0], // Down
+    ];
+
+    directions.forEach(([dx, dy]) => {
+      const newRow = row + dx;
+      const newCol = col + dy;
+
+      // Check if the new position is within the board bounds
+      if (newRow >= 0 && newRow < 8 && newCol >= 0 && newCol < 8) {
+        const tile = newBoard[newRow][newCol];
+
+        // If the tile is not revealed, not a mine, and has no adjacent mines, reveal it
+        if (!tile.isRevealed && !tile.isMine && tile.adjacentMines === 0) {
+          newBoard[newRow][newCol].isRevealed = true;
+
+          // Recursively reveal adjacent tiles for this tile
+          revealAdjacentTiles(newBoard, newRow, newCol);
+        } else if (!tile.isRevealed) {
+          // If the tile is not a mine but has adjacent mines, just reveal this tile without recursion
+          newBoard[newRow][newCol].isRevealed = true;
+        }
+      }
+    });
+    setBoard(newBoard);
+  };
+
   const handleTileClick = (rowIndex, colIndex) => {
     // Clone the current board state
     const newBoard = [...board];
@@ -25,6 +58,7 @@ function Board() {
     } else {
       newBoard[rowIndex][colIndex].isRevealed = true;
     }
+    revealAdjacentTiles(rowIndex, colIndex);
     setBoard(newBoard);
   };
 
@@ -42,6 +76,8 @@ function Board() {
             isMine={tile.isMine}
             isRevealed={tile.isRevealed}
             isFlagged={tile.isFlagged}
+            adjacentMines={tile.adjacentMines}
+            orthMines={tile.orthAdjacentMines}
             onClick={() => handleTileClick(Math.floor(index / 8), colIndex)}
           />
         );

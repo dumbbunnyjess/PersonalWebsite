@@ -114,6 +114,7 @@ function Welcome() {
             </div>
             <div className="container">
               <p>
+                <br />
                 In my freetime, I enjoy thrifting, gaming, working out, playing
                 poker, and finding new music! Feel free to reach out to me
                 anytime at{" "}
