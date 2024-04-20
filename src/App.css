@@ -199,7 +199,12 @@ footer {
 
 .container {
   display: flex;
-  justify-content: center; /* This centers the blocks horizontally in the container */
+  justify-content: wrap; /* This centers the blocks horizontally in the container */
+}
+
+.vertical_container {
+  display: flex;
+  flex-direction: column;
 }
 
 .half-block {
