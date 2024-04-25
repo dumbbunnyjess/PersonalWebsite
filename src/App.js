@@ -9,7 +9,6 @@ function App() {
   return (
     <Router>
       <div>
-        {/* Your routes */}
         <Routes>
           <Route path="/" element={<WelcomePage />} />
           <Route path="/minesweeper" element={<MinesweeperPage />} />

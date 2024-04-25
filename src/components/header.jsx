@@ -25,6 +25,15 @@ function CustomHeader() {
           >
             Welcome
           </button>
+        </div>
+        <h1 className="navbar-nav-middle">Jessica Lin</h1>
+        <div className="navbar-nav-right">
+          {/* <button className="navbar-nav-btn">My Interests</button> */}
+          {/* <button className="navbar-nav-btn">Contact</button> */}
+          {/* </div> */}
+          {/* <div className="navbar-nav-icon-container">
+          <img src={Github} alt="Github" className="navbar-nav-icon" />
+          <img src={LinkedIn} alt="LinkedIn" className="navbar-nav-icon" /> */}
           <div className="dropdown">
             <button className="navbar-nav-btn">Personal Projects</button>
             <div className="dropdown-content">
@@ -38,15 +47,6 @@ function CustomHeader() {
             </div>
           </div>
         </div>
-        <h1 className="navbar-nav-middle">Jessica Lin</h1>
-        <div className="navbar-nav-right">
-          <button className="navbar-nav-btn">My Interests</button>
-          {/* <button className="navbar-nav-btn">Contact</button> */}
-        </div>
-        {/* <div className="navbar-nav-icon-container">
-          <img src={Github} alt="Github" className="navbar-nav-icon" />
-          <img src={LinkedIn} alt="LinkedIn" className="navbar-nav-icon" />
-        </div> */}
       </nav>
     </div>
   );

@@ -8,9 +8,9 @@ import LAIcon from "../images/welcome/LA.png";
 import PythonIcon from "../images/welcome/PythonLogo.png";
 import CIcon from "../images/welcome/C++Logo.png";
 import JavaScriptIcon from "../images/welcome/JavaScriptLogo.png";
-import HTMLIcon from "../images/welcome/HTMLLogo.jpg";
+import HTMLIcon from "../images/welcome/HTMLLogo.png";
 import ReactIcon from "../images/welcome/ReactLogo.png";
-import CSSIcon from "../images/welcome/CSSLogo.jpg";
+import CSSIcon from "../images/welcome/CSSLogo.png";
 
 function Welcome() {
   return (
