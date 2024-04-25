@@ -7,9 +7,12 @@ function Minesweeper() {
     <div>
       <CustomHeader></CustomHeader>
       <div className="main-content">
-        <div className="app-container">
-          <Board></Board>
+        <div className="fixed-page-height-container">
+          <div className="app-container">
+            <Board></Board>
+          </div>
         </div>
+
         {/* Your Minesweeper component JSX */}
       </div>
       <Footer />

@@ -216,6 +216,18 @@ footer {
   min-height: 200px;
 }
 
+.fixed-page-height-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+  min-width: 370px;
+  align-items: center;
+  min-height: 200px;
+  height: calc(100vh - 50px - 73px);
+}
+
 .vertical_container {
   display: flex;
   justify-content: wrap;

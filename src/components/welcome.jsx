@@ -69,40 +69,36 @@ function Welcome() {
                 <br />I have classroom and personal experience working with:
               </p>
               <br />
-              <p>
-                <div className="logo_container">
-                  <img
-                    src={PythonIcon}
-                    alt="Python"
-                    className="circular-image"
-                  />
-                  Python
-                </div>
-                <div className="logo_container">
-                  <img src={CIcon} alt="C++" className="circular-image" />
-                  C++
-                </div>
-                <div className="logo_container">
-                  <img
-                    src={JavaScriptIcon}
-                    alt="JavaScript"
-                    className="circular-image"
-                  />
-                  JavaScript
-                </div>
-                <div className="logo_container">
-                  <img src={HTMLIcon} alt="HTML" className="circular-image" />
-                  HTML
-                </div>
-                <div className="logo_container">
-                  <img src={ReactIcon} alt="React" className="circular-image" />
-                  React
-                </div>
-                <div className="logo_container">
-                  <img src={CSSIcon} alt="CSS" className="circular-image" />
-                  CSS
-                </div>
-              </p>
+
+              <div className="logo_container">
+                <img src={PythonIcon} alt="Python" className="circular-image" />
+                Python
+              </div>
+              <div className="logo_container">
+                <img src={CIcon} alt="C++" className="circular-image" />
+                C++
+              </div>
+              <div className="logo_container">
+                <img
+                  src={JavaScriptIcon}
+                  alt="JavaScript"
+                  className="circular-image"
+                />
+                JavaScript
+              </div>
+              <div className="logo_container">
+                <img src={HTMLIcon} alt="HTML" className="circular-image" />
+                HTML
+              </div>
+              <div className="logo_container">
+                <img src={ReactIcon} alt="React" className="circular-image" />
+                React
+              </div>
+              <div className="logo_container">
+                <img src={CSSIcon} alt="CSS" className="circular-image" />
+                CSS
+              </div>
+
               <br />
             </div>
             <div className="container">
