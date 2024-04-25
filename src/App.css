@@ -13,17 +13,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
 }
@@ -61,10 +50,6 @@ body {
   font-style: normal;
 }
 
-header {
-  color: rgb(0, 0, 0);
-}
-
 p {
   font-size: 20px;
   font-family: inherit;
@@ -86,13 +71,29 @@ p {
   text-align: left;
   width: 100%; /* Takes the full width of the container */
 }
-
+.container_for_welcome_logo_container {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  width: 454px;
+  height: 120px;
+  flex-direction: row;
+}
+.welcome_logo_container {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  width: 217px;
+  height: 100px;
+  flex-direction: column;
+}
 .logo_container {
   display: flex;
   height: 40px;
   font-size: 16pt;
   justify-content: left;
   align-items: center;
+  padding-top: 20px;
 }
 
 .subtitle {
@@ -106,45 +107,12 @@ p {
   width: 100%; /* Takes the full width of the container */
 }
 
-h1 {
-  color: rgb(0, 0, 0);
-  font-size: 40pt;
-  text-align: center;
-  font-weight: 800;
-}
-
-h2 {
-  color: rgb(0, 0, 0);
-  font-size: 30pt;
-  font-family: inherit;
-  text-align: center;
-}
-
-h3 {
-  color: rgb(0, 0, 0);
-  font-size: 15pt;
-  text-align: center;
-  font-family: inherit;
-}
-
 main {
   height: 95vh;
   color: #000;
   display: flex;
   align-items: center;
   justify-content: space-around;
-}
-
-.left {
-  width: 52rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.right {
-  width: 52rem;
-  font-size: 2rem;
 }
 
 .main-content {
@@ -168,12 +136,6 @@ footer {
   width: 100%;
 }
 
-.footer-section a {
-  text-decoration: none;
-}
-.footer-section a:hover {
-  text-decoration: underline;
-}
 .footer-left {
   flex: 1;
   align-items: flex-start;
@@ -213,7 +175,7 @@ footer {
   flex: 1; /* Children will grow to fill the space */
   min-width: 370px;
   align-items: center;
-  min-height: 200px;
+  min-height: 100px;
 }
 
 .fixed-page-height-container {
@@ -228,16 +190,6 @@ footer {
   height: calc(100vh - 50px - 73px);
 }
 
-.vertical_container {
-  display: flex;
-  justify-content: wrap;
-  flex-direction: column;
-  justify-content: wrap; /* This centers the blocks horizontally in the container */
-  flex: 1; /* Children will grow to fill the space */
-  /* min-width: 840px; Minimum width before wrapping */
-  min-height: 580px;
-}
-
 .half-block {
   flex: none; /* Equal amount of space */
   min-width: 420px;
@@ -245,14 +197,7 @@ footer {
   box-sizing: border-box; /* Includes padding and border in the element's total width and height */
   text-align: left; /* Centers the text horizontally */
   padding: 1rem; /* Adjust the padding as necessary */
-}
-.welcome-paragraph {
-  flex: none; /* Equal amount of space */
-  width: 50%; /* 50% of container's width */
-  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-  text-align: left; /* Centers the text horizontally */
-  padding: 1rem; /* Adjust the padding as necessary */
-  min-width: 4;
+  justify-content: row;
 }
 .third-block {
   display: flex;
@@ -263,23 +208,6 @@ footer {
   flex: 1; /* Children will grow to fill the space */
   max-width: 400px; /* Max width of the container */
   min-height: 575px; /* Min height of the container */
-}
-.two-thirds-block {
-  flex: none; /* This makes each block take up an equal amount of space */
-  width: 66%; /* This limits the block's width to half the container's width */
-  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-}
-.quarter-block {
-  display: flex; /* Establish Flexbox context */
-  flex-direction: column; /* Stack children vertically */
-  justify-content: center; /* Center children vertically */
-  align-items: center; /* Center children horizontally */
-  flex: none;
-  max-width: 25%;
-  padding: 1rem;
-  box-sizing: border-box;
-  text-align: left; /* Adjust based on your text alignment needs */
-  height: 70vh; /* Example height, adjust as needed */
 }
 
 .image {
@@ -294,11 +222,10 @@ footer {
   height: auto; /* Maintain aspect ratio */
   object-fit: contain; /* This ensures the image's aspect ratio is maintained */
 }
-.circular-image {
+.icon {
   width: 40px; /* or any specific size */
   padding-right: 10px;
 }
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -309,10 +236,6 @@ footer {
   top: 0;
   left: 0;
   background-color: #fff;
-  height: 73px;
-}
-.navbar-nav {
-  display: flex;
   height: 73px;
 }
 .navbar-nav-left {
@@ -336,6 +259,32 @@ footer {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  text-overflow: ellipsis;
+}
+
+.navbar-nav li {
+  padding: 0 15px; /* Adjust the spacing between the menu items */
+}
+
+.navbar-nav a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase; /* Makes the text uppercase */
+}
+.navbar-nav-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 10pt;
+  cursor: pointer;
+  padding: 0;
+  margin: 30px 15px;
+  text-transform: uppercase;
+  height: 100%;
+}
+.navbar-nav-btn:hover {
+  color: rgb(152, 152, 152);
+  text-decoration: underline;
 }
 .navbar-nav-icon {
   padding-bottom: 10px;
@@ -391,20 +340,14 @@ footer {
   padding: 13px 16px;
   text-transform: uppercase;
 }
-
-/* Corrected the typo from .dropbt:hover to .dropbtn:hover */
 .dropbtn:hover {
   color: rgb(152, 152, 152);
   text-decoration: underline;
 }
-
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
 }
-
-/* Dropdown Content (Hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -415,7 +358,6 @@ footer {
   left: 9px;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
   color: black;
   padding: 13px 16px;
@@ -423,13 +365,11 @@ footer {
   display: block;
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
   background-color: rgb(235, 234, 231);
 }
 
-/* Style adjustments for the dropdown to fit your navbar if necessary */
 .navbar .dropdown {
   display: inline-block;
 }
@@ -516,35 +456,4 @@ footer {
   align-items: center;
   height: 50px;
   width: 50px;
-}
-.tile > [data-status="hidden"] {
-  background-color: rgb(235, 235, 235);
-  cursor: pointer;
-}
-.tile > [data-status="mine"] {
-  background-color: red;
-  cursor: pointer;
-}
-.tile > [data-status="number"] {
-  background-color: darkgray;
-  cursor: pointer;
-}
-.tile > [data-status="marked"] {
-  background-color: yellow;
-  cursor: pointer;
-}
-
-@media (max-width: 500px) {
-  .navbar {
-    justify-content: space-between;
-  }
-  .navbar-nav-left {
-    display: flex;
-    align-items: center;
-    justify-content: baseline; /* Aligns items to the start of the `.navbar-nav-left` */
-  }
-
-  .navbar-logo {
-    flex: 1;
-  }
 }

@@ -43,7 +43,7 @@ function Welcome() {
                 <img
                   src={UCILogo}
                   alt="University of California, Irvine"
-                  className="circular-image"
+                  className="icon"
                 />
                 University of California, Irvine
               </div>
@@ -51,59 +51,66 @@ function Welcome() {
                 <img
                   src={UtahIcon}
                   alt="Salt Lake City, Utah"
-                  className="circular-image"
+                  className="icon"
                 />
                 Salt Lake City, Utah
               </div>
               <div className="logo_container">
-                <img
-                  src={LAIcon}
-                  alt="Los Angeles"
-                  className="circular-image"
-                />
+                <img src={LAIcon} alt="Los Angeles" className="icon" />
                 Los Angeles Metrapolitan Area
               </div>
             </div>
             <div className="half-block">
+              <div className="subtitle">Programming Languages:</div>
+              <div className="container_for_welcome_logo_container">
+                <div className="welcome_logo_container">
+                  <div className="logo_container">
+                    <img src={PythonIcon} alt="Python" className="icon" />
+                    Python
+                  </div>
+                  <div className="logo_container">
+                    <img src={CIcon} alt="C++" className="icon" />
+                    C++
+                  </div>
+                  <div className="logo_container">
+                    <img
+                      src={JavaScriptIcon}
+                      alt="JavaScript"
+                      className="icon"
+                    />
+                    JavaScript
+                  </div>
+                </div>
+                <div className="welcome_logo_container">
+                  <div className="logo_container">
+                    <img src={HTMLIcon} alt="HTML" className="icon" />
+                    HTML
+                  </div>
+                  <div className="logo_container">
+                    <img src={ReactIcon} alt="React" className="icon" />
+                    React
+                  </div>
+                  <div className="logo_container">
+                    <img src={CSSIcon} alt="CSS" className="icon" />
+                    CSS
+                  </div>
+                </div>
+
+                <br />
+              </div>
+              <br />
+              <br />
+              <br />
+              <div className="subtitle">Work Experience:</div>
+              <p>• Director of Technology - Delta Sigma Pi</p>
               <p>
-                <br />I have classroom and personal experience working with:
+                • Introduction to Python Learning Assistant - Donald Bren School
+                of I&CS
               </p>
-              <br />
-
-              <div className="logo_container">
-                <img src={PythonIcon} alt="Python" className="circular-image" />
-                Python
-              </div>
-              <div className="logo_container">
-                <img src={CIcon} alt="C++" className="circular-image" />
-                C++
-              </div>
-              <div className="logo_container">
-                <img
-                  src={JavaScriptIcon}
-                  alt="JavaScript"
-                  className="circular-image"
-                />
-                JavaScript
-              </div>
-              <div className="logo_container">
-                <img src={HTMLIcon} alt="HTML" className="circular-image" />
-                HTML
-              </div>
-              <div className="logo_container">
-                <img src={ReactIcon} alt="React" className="circular-image" />
-                React
-              </div>
-              <div className="logo_container">
-                <img src={CSSIcon} alt="CSS" className="circular-image" />
-                CSS
-              </div>
-
-              <br />
+              <p>• Accounting Intern - Restaurant and Family Mart</p>
             </div>
             <div className="container">
               <p>
-                <br />
                 In my freetime, I enjoy thrifting, gaming, working out, playing
                 poker, and finding new music! Feel free to reach out to me
                 anytime at{" "}
@@ -112,7 +119,6 @@ function Welcome() {
                 </a>
                 .
               </p>
-              <br />
             </div>
           </div>
         </div>
