@@ -7,21 +7,30 @@ import {
   checkLoss,
 } from "../engine/minesweeperEngine";
 
+/**
+ * Board component is essentially the central hub where the front-end (user interface)
+ * interacts with the underlying game logic (game engine).
+ */
 function Board() {
-  const [board, setBoard] = useState(createInitialBoard());
+  const [board, setBoard] = useState(createInitialBoard()); // initializes logical board
 
   useEffect(() => {
-    printBoard(board);
+    printBoard(board); // prints the board to the console
   }, [board]);
 
   return (
+    // returns physical representation of the logical board
     <div className="board">
+      {" "}
+      {/** HTML container for board */}
       {board.flat().map((tile, index) => {
-        const colIndex = index % 8;
-        const rowIndex = Math.floor(index / 8);
-        const isEvenPosition = (rowIndex + colIndex) % 2 === 0;
-        const tileClass = isEvenPosition ? "tile1" : "tile2";
+        // Flattens 2d array into 1d array */
+        const colIndex = index % 8; // calculates column's index based on tile's index
+        const rowIndex = Math.floor(index / 8); // calculates the row's index based on the tile's index
+        const isEvenPosition = (rowIndex + colIndex) % 2 === 0; // calculates if the tile is in an even position
+        const tileClass = isEvenPosition ? "tile1" : "tile2"; // Assigns a CSS class based on the position
         return (
+          // returns a Tile object for each tile
           <Tile
             key={index}
             className={tileClass}
@@ -30,13 +39,15 @@ function Board() {
             isFlagged={tile.isFlagged}
             adjacentMines={tile.adjacentMines}
             onClick={() => handleTileClick(board, rowIndex, colIndex, setBoard)}
+            onRightClick={(event) =>
+              handleRightClick(board, rowIndex, colIndex, setBoard, event)
+            }
           />
         );
       })}
     </div>
   );
 }
-
 export default Board;
 
 /**
@@ -91,4 +102,33 @@ function handleTileClick(board, rowIndex, colIndex, setBoard) {
   }
 
   setBoard(newBoard);
+}
+
+/**
+ * Handles the right-click event on a tile, toggling the flag on or off.
+ * This function prevents the default browser context menu from appearing,
+ * checks if the clicked tile has not been revealed, and toggles the flag status
+ * of the tile. The updated board state is then set to trigger a re-render.
+ *
+ * @param {Array} board - The current state of the Minesweeper board as a 2D array.
+ * @param {number} rowIndex - The row index of the tile that was right-clicked.
+ * @param {number} colIndex - The column index of the tile that was right-clicked.
+ * @param {Function} setBoard - The React setState function for updating the board state.
+ * @param {Event} event - The event object from the right-click action.
+ */
+function handleRightClick(board, rowIndex, colIndex, setBoard, event) {
+  event.preventDefault(); // Prevent the default behavior of a right-click from showing
+
+  const newBoard = [...board];
+  const tile = newBoard[rowIndex][colIndex];
+
+  // Toggle the isFlagged state if the tile is not revealed
+  if (!tile.isRevealed) {
+    if (tile.isFlagged) {
+      tile.isFlagged = false;
+    } else {
+      tile.isFlagged = true;
+    }
+    setBoard(newBoard);
+  }
 }

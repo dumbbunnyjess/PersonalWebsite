@@ -14,7 +14,7 @@ function determineTileStateClass(isMine, isRevealed, adjacentMines, className) {
   if (isMine) {
     return "mine";
   } else if (adjacentMines > 0) {
-    return "number";
+    return className.includes("tile1") ? "revealedtile1" : "revealedtile2";
   } else {
     return className.includes("tile1") ? "revealedtile1" : "revealedtile2";
   }
@@ -39,6 +39,7 @@ function getContent(isRevealed, adjacentMines) {
  * @param {boolean} isRevealed - Indicates if the tile has been revealed.
  * @param {boolean} isFlagged - Indicates if the tile is flagged.
  * @param {function} onClick - Function to handle click events on the tile.
+ * @param {function} onRightClick - Function to handle right click events on the tile.
  * @param {string} className - Additional CSS classes for styling the tile.
  * @param {number} adjacentMines - Number of mines adjacent to this tile.
  * @returns {JSX.Element} A JSX element representing the tile with appropriate styling and behavior.
@@ -48,6 +49,7 @@ const Tile = ({
   isRevealed,
   isFlagged,
   onClick,
+  onRightClick,
   className,
   adjacentMines,
 }) => {
@@ -64,7 +66,7 @@ const Tile = ({
 
   // Render the tile with an onClick handler and display the appropriate content
   return (
-    <div className={tileClasses} onClick={onClick}>
+    <div className={tileClasses} onClick={onClick} onContextMenu={onRightClick}>
       {content}
     </div>
   );
