@@ -58,27 +58,54 @@ export default Board;
  * @param {number} col - The column index of the current tile.
  */
 function revealAdjacentTiles(board, row, col) {
-  const directions = [
-    [0, -1], // Left
-    [-1, 0], // Up
-    [0, 1], // Right
-    [1, 0], // Down
+  const directions_for_zero_adjacent_tiles = [
+    [1, -1], // Left top
+    [0, -1], // Left middle
+    [-1, -1], // Left bottom
+    [-1, 0], // Middle top
+    [1, 1], // Right bottom
+    [0, 1], // Right middle
+    [-1, 1], // Right top
+    [1, 0], // Middle down
   ];
+  // const directions_for_non_zero_adjacent_tiles = [
+  //   [0, -1], // Left middle
+  //   [-1, 0], // Middle top
+  //   [0, 1], // Right middle
+  //   [1, 0], // Middle down
+  // ];
 
-  directions.forEach(([dx, dy]) => {
-    const newRow = row + dx;
-    const newCol = col + dy;
+  const currentTile = board[row][col];
+  if (currentTile.adjacentMines === 0) {
+    directions_for_zero_adjacent_tiles.forEach(([dx, dy]) => {
+      const newRow = row + dx;
+      const newCol = col + dy;
 
-    if (newRow >= 0 && newRow < 8 && newCol >= 0 && newCol < 8) {
-      const tile = board[newRow][newCol];
-      if (!tile.isRevealed && !tile.isMine) {
-        tile.isRevealed = true;
-        if (tile.adjacentMines === 0) {
-          revealAdjacentTiles(board, newRow, newCol);
+      if (newRow >= 0 && newRow < 8 && newCol >= 0 && newCol < 8) {
+        const tile = board[newRow][newCol];
+        if (!tile.isRevealed && !tile.isMine) {
+          tile.isRevealed = true;
+          if (tile.adjacentMines === 0) {
+            revealAdjacentTiles(board, newRow, newCol);
+          }
         }
       }
-    }
-  });
+    });
+  }
+  // else {
+  //   directions_for_non_zero_adjacent_tiles.forEach(([dx, dy]) => {
+  //     const newRow = row + dx;
+  //     const newCol = col + dy;
+
+  //     if (newRow >= 0 && newRow < 8 && newCol >= 0 && newCol < 8) {
+  //       const tile = board[newRow][newCol];
+  //       if (!tile.isRevealed && !tile.isMine) {
+  //         tile.isRevealed = true;
+  //       }
+  //     }
+  //     });
+  //   }
+  // }
 }
 
 /**

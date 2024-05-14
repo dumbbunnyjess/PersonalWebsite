@@ -118,6 +118,8 @@ function Welcome() {
                   linjjessica@gmail.com
                 </a>
                 .
+                <br />
+                <br />
               </p>
             </div>
           </div>
