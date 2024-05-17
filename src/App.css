@@ -387,19 +387,26 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.boardGameOver {
-  display: grid;
-  background-color: grey;
-  cursor: pointer;
-  position: relative;
-  justify-content: center;
-  align-items: center;
+.resetGameButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #f0f0f0; /* Light grey background, was incorrectly labeled as green */
+  outline-width: 2px; /* More typical outline width */
+  outline-style: solid; /* This is needed to make the outline visible */
+  outline-color: rgb(187, 187, 187);
+  color: white; /* White text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Indicates clickable */
+  font-size: 16px; /* Readability */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 .app-container {
   display: flex;
-  justify-content: center; /* Horizontally center the content */
-  align-items: center; /* Vertically center the content */
-  height: 100%;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center children vertically */
+  align-items: center; /* Center children horizontally */
+  height: 100%; /* Ensure the container fills its parent or has a defined height */
 }
 
 .tile {

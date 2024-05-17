@@ -18,6 +18,10 @@ function Board() {
     printBoard(board); // prints the board to the console
   }, [board]);
 
+  // const resetBoard = () => {
+  //   setBoard(createInitialBoard()); // Resets the board to its initial state
+  // };
+
   return (
     // returns physical representation of the logical board
     <div className="board">
