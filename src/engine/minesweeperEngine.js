@@ -4,6 +4,7 @@
  */
 export const createInitialBoard = () => {
   let board = initializeBoard();
+  let minesPlaced = false;
   placeMines(board);
   return board;
 };

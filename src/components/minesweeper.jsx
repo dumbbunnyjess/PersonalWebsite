@@ -12,8 +12,6 @@ function Minesweeper() {
             <Board></Board>
           </div>
         </div>
-
-        {/* Your Minesweeper component JSX */}
       </div>
       <Footer />
     </div>

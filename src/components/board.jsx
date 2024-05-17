@@ -68,12 +68,6 @@ function revealAdjacentTiles(board, row, col) {
     [-1, 1], // Right top
     [1, 0], // Middle down
   ];
-  // const directions_for_non_zero_adjacent_tiles = [
-  //   [0, -1], // Left middle
-  //   [-1, 0], // Middle top
-  //   [0, 1], // Right middle
-  //   [1, 0], // Middle down
-  // ];
 
   const currentTile = board[row][col];
   if (currentTile.adjacentMines === 0) {
@@ -92,20 +86,6 @@ function revealAdjacentTiles(board, row, col) {
       }
     });
   }
-  // else {
-  //   directions_for_non_zero_adjacent_tiles.forEach(([dx, dy]) => {
-  //     const newRow = row + dx;
-  //     const newCol = col + dy;
-
-  //     if (newRow >= 0 && newRow < 8 && newCol >= 0 && newCol < 8) {
-  //       const tile = board[newRow][newCol];
-  //       if (!tile.isRevealed && !tile.isMine) {
-  //         tile.isRevealed = true;
-  //       }
-  //     }
-  //     });
-  //   }
-  // }
 }
 
 /**
