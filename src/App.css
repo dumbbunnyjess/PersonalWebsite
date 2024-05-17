@@ -394,7 +394,7 @@ footer {
   outline-width: 2px; /* More typical outline width */
   outline-style: solid; /* This is needed to make the outline visible */
   outline-color: rgb(187, 187, 187);
-  color: white; /* White text color */
+  color: black; /* White text color */
   border: none;
   border-radius: 5px;
   cursor: pointer; /* Indicates clickable */
